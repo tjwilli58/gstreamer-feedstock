@@ -129,6 +129,7 @@ outputs:
         - libvorbis
         - expat
         - pango
+        - harfbuzz
       run:
         - ${{ pin_subpackage('gstreamer', exact=True) }}
       run_exports:
