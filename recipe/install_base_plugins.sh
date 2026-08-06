@@ -7,7 +7,7 @@ pushd plugins_base
 mkdir build
 pushd build
 
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PREFIX/lib/pkgconfig:$BUILD_PREFIX/lib/pkgconfig
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig:$BUILD_PREFIX/lib/pkgconfig
 EXTRA_FLAGS="-Dintrospection=enabled"
 if [[ $CONDA_BUILD_CROSS_COMPILATION == "1" ]]; then
   # Use Meson cross-file flag to enable cross compilation
