@@ -1,6 +1,6 @@
 schema_version: 1
 context:
-  version: "1.28.5"
+  version: "1.28.6"
 
 recipe:
   name: gstreamer_and_plugins
@@ -8,12 +8,12 @@ recipe:
 
 source:
   - url: https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-${{ version }}.tar.xz
-    sha256: a5a9f783809b17a8eb774f4a7695b2cb8cba6b15520129906f87eaf30e7f8469
+    sha256: 62b6b9f0ad3147a6dd6420ac64a91180b14e990695bddd353b96041611d052ca
   - url: https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-${{ version }}.tar.xz
-    sha256: 776f19228f91fd25bbf54d9850597e158507f594872a52b9b6814e2429b43eaa
+    sha256: 0ba699c7c6c66f4ba640be78cb38a24715add9683f3e3a199f5369dc5a4f04ac
     target_directory: plugins_base
   - url: https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-${{ version }}.tar.xz
-    sha256: 58b45d24a1d77b39d7bb7d9ccc6e2d76bbf28618998c335c163f18e6f94a9324
+    sha256: b0c620a4b18b6ee931b4c43bbf1760d308666dc37f730a7e7f1ad327e59ce2df
     target_directory: plugins_good
 
 build:
@@ -129,6 +129,7 @@ outputs:
         - libvorbis
         - expat
         - pango
+        - harfbuzz
       run:
         - ${{ pin_subpackage('gstreamer', exact=True) }}
       run_exports:
