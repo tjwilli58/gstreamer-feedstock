@@ -1,7 +1,6 @@
-conda_build_tool: rattler-build
 bot:
   abi_migration_branches:
-    - "1.26.x.x"
+  - 1.26.x.x
   version_updates:
     even_odd_versions: true
 build_platform:
@@ -9,6 +8,7 @@ build_platform:
   osx_64: osx_64
 conda_build:
   pkg_format: '2'
+conda_build_tool: rattler-build
 conda_forge_output_validation: true
 github:
   branch_name: main
